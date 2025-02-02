@@ -30,6 +30,8 @@ namespace DotnetSelenium
 
             //5. Click on the element
             webElement.SendKeys(Keys.Return);
+
+            webElement.Click();
         }
     }
 }
