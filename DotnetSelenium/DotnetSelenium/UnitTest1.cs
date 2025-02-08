@@ -33,5 +33,24 @@ namespace DotnetSelenium
 
             webElement.Click();
         }
+
+        [Test]
+        public void EAWebSiteTest()
+        {
+            // Sudo code for setting up Selenium
+            // 1. Create a new instance of Selenium Web Driver
+            IWebDriver driver = new ChromeDriver();
+
+            // 2. Navigate to the URL
+            driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+            // 3. Find the login link
+            IWebElement loginLink = driver.FindElement(By.Id("loginLink"));
+            // 4. Click the login link
+            loginLink.Click();
+            // 5. Find the UserName text box
+            IWebElement txtUserName = driver.FindElement(By.Name("UserName"));
+            // 6. Type on the textUserName
+            txtUserName.SendKeys("admin");
+        }
     }
 }
